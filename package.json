@@ -1,0 +1,14 @@
+{
+  "name": "ai-photo-studio",
+  "version": "0.1.0",
+  "description": "Local web app for generating images with Google AI Studio (Nano Banana), OpenAI (GPT Image) and OpenRouter.",
+  "type": "module",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

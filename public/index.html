@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Photo Studio</title>
+<link rel="stylesheet" href="webfonts/NotoSans/stylesheet.css">
+<link rel="stylesheet" href="webfonts/NotoSansMono/stylesheet.css">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<link rel="stylesheet" href="css/solid.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="gallery">
+  <div class="g-head" id="gHead"></div>
+  <div id="days"><p class="loading-screen">Loading your library…</p></div>
+</div>
+<div class="dock" id="dock">
+  <section class="cpanel" id="gen" aria-label="Generate"></section>
+  <form id="send_form" autocomplete="off">
+    <div class="sf-side"><button type="button" data-act="attach" title="Attach reference images" aria-label="Attach reference images"><i class="fa-solid fa-paperclip"></i></button></div>
+    <label for="send_textarea" hidden>Prompt</label>
+    <textarea id="send_textarea" rows="1" placeholder="Describe an image, or attach references to edit them…"></textarea>
+    <div class="sf-side">
+      <button type="button" id="provBtn" data-act="providers" title="Providers and keys" aria-label="Providers and keys"><i class="fa-solid fa-plug"></i><span class="status-dot" id="toggleDot" data-state="idle"></span></button>
+      <button type="submit" id="genBtn" aria-label="Generate"><i class="fa-solid fa-wand-magic-sparkles"></i><span class="n" id="genN"></span></button>
+    </div>
+    <input type="file" id="fileInput" accept="image/*" multiple hidden>
+  </form>
+</div>
+<div id="lightbox"></div>
+<div id="modalHost"></div>
+<div id="toastHost"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

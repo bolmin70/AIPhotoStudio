@@ -1,0 +1,4 @@
+# Your keys, library and images stay local
+data/
+node_modules/
+*.log
